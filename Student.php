@@ -25,7 +25,7 @@ class Student {
         $this->emails[$which] = $address;
     }
     
-    function add_grades($grade) {
+    function add_grade($grade) {
         $this->grades[] = $grade;
     }
     
