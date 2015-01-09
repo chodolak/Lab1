@@ -14,9 +14,9 @@ and open the template in the editor.
             include('student.php');
             
             $students = array();
-            $first = new Student();
             
             //Student 1
+            $first = new Student();
             $first->surname = "Doe";
             $first->first_name = "John";
             $first->add_email('home','john@doe.com');
@@ -38,8 +38,17 @@ and open the template in the editor.
             $second->add_grade(50);
             $students['a456'] = $second;
             
+            //Michael Chodolak student
+            $second = new Student();
+            $second->surname = "Chodolak";
+            $second->first_name = "Michael";
+            $second->add_email('home','chodolak@gmail.com');
+            $second->add_grade(99);
+            $students['a00891664'] = $second;
+            
             ksort($students);
             
+            //Prints each student in the array
             foreach($students as $student)
                 echo $student->toString();
         ?>
